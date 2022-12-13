@@ -26,6 +26,3 @@ def entryStepIris () :
     print (result)
     print (iris_y_test)
 
-
-
-entryStepIris ()
