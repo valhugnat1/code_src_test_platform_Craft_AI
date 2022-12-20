@@ -9,7 +9,7 @@ sdk = CraftAiSdk(
 )
 
 # Create a step with the iris ML code (with the code in the folder in the GitHub repository).
-sdk.create_step(function_path="2_first_step_pipeline/iris_ml_platform.py",
+sdk.create_step(function_path="src/2_first_step_pipeline/iris_ml_platform.py",
 	function_name="entryStepIris", 
 	step_name="irisclassifier",
 	description="This function creates a classifier model for iris and makes prediction on test data set",
