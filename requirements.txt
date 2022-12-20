@@ -1,3 +1,2 @@
-craft_ai_sdk 
 scikit-learn
 numpy
