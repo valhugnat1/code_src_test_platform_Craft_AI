@@ -1,9 +1,6 @@
-
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
-from sklearn import datasets
-import joblib
-
+import pandas as pd
 
 
 def entryStepIris (dataXFilePath, dataYFilePath) :
@@ -24,8 +21,6 @@ def entryStepIris (dataXFilePath, dataYFilePath) :
     knn.fit(iris_X_train, iris_y_train)
 
     result = knn.predict(iris_X_test)
-    print (knn.predict([[5, 8, 9, 1]])[0])
 
-    print (iris_y_test)
-
-    return result
+    # To confirm 
+    return pd.DataFrame(result)
