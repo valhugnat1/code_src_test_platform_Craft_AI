@@ -1,7 +1,4 @@
 import os
-from sklearn import datasets
-import pandas as pd
-import tarfile
 from craft_ai_sdk import CraftAiSdk
 
 
@@ -12,22 +9,6 @@ sdk = CraftAiSdk(
     sdk_token=os.environ.get("CRAFT_AI_ACCESS_TOKEN")
 )
 
-# Download dataset
-iris_X, iris_y = datasets.load_iris(return_X_y=True)
-
-# Conversion to csv format
-iris_X_df = pd.DataFrame(iris_X)
-iris_X_df.to_csv("irisX.csv")
-
-iris_y_df = pd.DataFrame(iris_y)
-iris_y_df.to_csv("irisY.csv")
-
-# Compress file 
-tar = tarfile.open("irisDataSet.tar.gz", "w:gz")
-for name in ["irisX.csv", "irisY.csv"]:
-    tar.add(name)
-tar.close()
-
 
 # Upload to data store
 sdk.upload_data_store_object(
@@ -36,10 +17,19 @@ sdk.upload_data_store_object(
 )
 
 
+# Mapping
+
+
+
+# Endpoint manual mapping deployment 
+
+
+# Trigger new deployment
+
+
 
 
 # ---------------------------------------------------------------
-
 
 
 

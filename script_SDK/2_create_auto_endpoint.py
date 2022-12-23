@@ -1,8 +1,9 @@
 import os
 import requests 
-from craft_ai_sdk import CraftAiSdk
-from craft_ai_sdk import StepDependency
-from craft_ai_sdk import Input, Output
+import pandas as pd
+import tarfile
+from sklearn import datasets
+from craft_ai_sdk import CraftAiSdk, StepDependency, Input, Output
 
 # Connect to the environment on craft AI platform 
 sdk = CraftAiSdk(
@@ -51,10 +52,29 @@ endpoint = sdk.create_endpoint(
 	endpoint_name="irisClassifier-endpoint"
 )
 
+
+# Download dataset
+iris_X, iris_y = datasets.load_iris(return_X_y=True)
+
+# Conversion to csv format
+iris_X_df = pd.DataFrame(iris_X)
+iris_X_df.to_csv("irisX.csv")
+
+iris_y_df = pd.DataFrame(iris_y)
+iris_y_df.to_csv("irisY.csv")
+
+# Compress file 
+tar = tarfile.open("irisDataSet.tar.gz", "w:gz")
+for name in ["irisX.csv", "irisY.csv"]:
+    tar.add(name)
+tar.close()
+
+
 # Trigger the endpoint with a post request 
 endpointURL = "CRAFT_AI_ENVIRONMENT_URL/endpoints/" + endpoint["name"]
 headers = {"Authorization": "EndpointToken " + endpoint["endpoint_token"]}
-requests.post(endpointURL, headers=headers)
+files = {'upload_file': open('irisDataSet.tar.gz','rb')}
+requests.post(endpointURL, headers=headers, files=files)
 
 
 
@@ -72,3 +92,13 @@ requests.post(endpointURL, headers=headers)
 # print (sdk.get_pipeline_execution(pipeline_name="irisClassifier-pipeline", execution_id=exec_id))
 # print(sdk.get_pipeline_execution_logs(pipeline_name="irisClassifier-pipeline", execution_id=exec_id))
 
+
+
+
+
+# ---------------------------------------------------------------
+
+# files = {'upload_file': open('file.txt','rb')}
+# values = {'DB': 'photcat', 'OUT': 'csv', 'SHORT': 'short'}
+
+# r = requests.post(url, files=files, data=values)

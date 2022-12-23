@@ -1,13 +1,17 @@
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 import pandas as pd
+import tarfile
 
 
-def entryStepIris (dataXFilePath, dataYFilePath) :
+def entryStepIris (dataSetPath) :
 
-    # TO EDIT -> Write file 
-    iris_X = dataXFilePath
-    iris_y = dataYFilePath
+    my_tar = tarfile.open(dataSetPath)
+    my_tar.extractall('./')
+    my_tar.close()
+
+    iris_X =  pd.read_csv('irisX.csv')
+    iris_y =  pd.read_csv('irisY.csv')
 
     np.random.seed(0)
     indices = np.random.permutation(len(iris_X))
