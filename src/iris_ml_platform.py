@@ -1,6 +1,6 @@
 
 
 
-def entryStepIris (dataSetPath) :
+def entryStepIris () :
 
     print ("Hello world !")
