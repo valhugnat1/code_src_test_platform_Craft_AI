@@ -1,6 +1,6 @@
 
 
 
-def entryStepIris () :
+def entryStepHelloWorld () :
 
     print ("Hello world !")
