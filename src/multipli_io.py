@@ -1,10 +1,10 @@
 
 
 
-def entryStepMultipli (a, b) :
+def entryStepMultipli (number1, number2) :
 
-    c = a * b
+    c = number1 * number2
 
-    print ("Res : " + c)
+    print ("Res : " + resultMulti)
 
-    return c
+    return resultMulti
