@@ -3,9 +3,9 @@
 
 def entryStepMultipli (number1, number2) :
 
-    resultMulti = str(number1 * number2)
+    resultMulti = number1 * number2
 
-    print ("Res : " + resultMulti)
+    print ("Res : " + str(resultMulti))
 
     return {"resultMulti" : resultMulti}
 
