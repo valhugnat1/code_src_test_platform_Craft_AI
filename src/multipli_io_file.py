@@ -13,4 +13,4 @@ def entryStepMultipli (pathEntry) :
     
     fileOjb = {"resultFile" : {"path": "file_output.txt"}}
 
-    return fileOjb
+    return fileOjb 
