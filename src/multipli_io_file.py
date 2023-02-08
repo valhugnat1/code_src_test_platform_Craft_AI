@@ -1,6 +1,6 @@
 
 
-def entryStepMultipli (pathEntry) :
+def entryStepFileIo (pathEntry) :
     print (pathEntry)
 
     with open(pathEntry["path"]) as f:
