@@ -1,9 +1,9 @@
 
 
-def entryStepFileIo (pathEntry) :
-    print (pathEntry)
+def entryStepFileIo (entryFile) :
+    print (entryFile)
 
-    with open(pathEntry["path"]) as f:
+    with open(entryFile["path"]) as f:
         contents = f.readlines()
         print (contents)
 
