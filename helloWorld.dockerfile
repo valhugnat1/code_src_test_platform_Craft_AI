@@ -10,7 +10,7 @@ WORKDIR ${ROOT_DIR}
 # RUN apt-get install dependencies 
 
 # Install Python dependencies
-RUN pip install scikit-learn
+# RUN pip install dependencies
 
 # context is repo root 
 COPY . . 
