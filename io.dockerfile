@@ -15,5 +15,5 @@ WORKDIR ${ROOT_DIR}
 COPY . . 
 
 
-ENTRYPOINT [ "python", "src/ioDockerStep.py" ]
+ENTRYPOINT [ "python", "src/dockerStep/ioDockerStep.py" ]
 

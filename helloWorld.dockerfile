@@ -16,5 +16,5 @@ RUN pip install scikit-learn
 COPY . . 
 
 
-ENTRYPOINT [ "python", "src/ioDockerStep.py" ]
+ENTRYPOINT [ "python", "src/dockerStep/ioDockerStep.py" ]
 
