@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # Post-processing: Outputs
     output_dir = '/app'
-    with open(os.path.join(output_dir, 'output_var'), 'w') as f:
+    with open(os.path.join(output_dir, 'output-output_var'), 'w+') as f:
         json.dump(result, f)
         
     #with open(os.path.join(output_dir, 'output_file'), 'w') as f:
