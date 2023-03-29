@@ -32,5 +32,5 @@ if __name__ == "__main__":
     with open(os.path.join(output_dir, 'output_var'), 'w') as f:
         json.dump(result, f)
         
-    with open(os.path.join(output_dir, 'output_file'), 'w') as f:
-        f.write('\n'.join(f'* {item}' for item in result))
+    #with open(os.path.join(output_dir, 'output_file'), 'w') as f:
+    #    f.write('\n'.join(f'* {item}' for item in result))
