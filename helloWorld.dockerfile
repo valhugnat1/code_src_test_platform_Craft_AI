@@ -6,15 +6,15 @@ ENV ROOT_DIR /app
 WORKDIR ${ROOT_DIR}
 # RUN mkdir -p ROOT_DIR
 
-# Install system dependency 
-# RUN apt-get install dependence 
+# Install system dependencies 
+# RUN apt-get install dependencies 
 
 # Install Python dependencies
-# RUN pip install dependencies
+RUN pip install scikit-learn
 
 # context is repo root 
 COPY . . 
 
 
-ENTRYPOINT [ "python", "src/helloWorld.py" ]
+ENTRYPOINT [ "python", "src/ioDockerStep.py" ]
 
