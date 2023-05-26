@@ -6,13 +6,13 @@ def metricsStep () :
 
     sdk = CraftAiSdk()
 
-    sdk.record_metric_value("label", 12)
+    sdk.record_metric_value("metric", 12)
 
     time.sleep(10)
-    sdk.record_metric_value("label", 0.1409)
+    sdk.record_metric_value("accuracy", 0.1409)
     
     time.sleep(10)
-    sdk.record_metric_value("label", 1/3)
+    sdk.record_metric_value("loss", 1/3)
 
 
     print ("Metrics are send")
