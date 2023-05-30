@@ -2,3 +2,6 @@ scikit-learn
 numpy
 pandas
 craft-ai-sdk
+git+https://github.com/valhugnat1/Chronyk-pipTest.git
+
+#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
