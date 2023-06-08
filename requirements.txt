@@ -4,4 +4,3 @@ pandas
 craft_ai_sdk
 joblib
 io
-${PACKAGE_CHRONYK_NAME}
