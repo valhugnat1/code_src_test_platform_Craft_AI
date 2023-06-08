@@ -1,5 +1,4 @@
 scikit-learn
 numpy
 pandas
-craft-ai-sdk
 ${PACKAGE_CHRONYK_NAME}
