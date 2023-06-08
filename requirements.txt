@@ -1,6 +1,5 @@
 scikit-learn
 numpy
 pandas
-craft_ai_sdk
+craft_ai_sdk==0.18.0rc1
 joblib
-io
