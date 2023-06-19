@@ -10,8 +10,8 @@ def metricsList () :
 
 
     time.sleep(5)
-    sdk.record_metrecord_list_metric_valuesric_value("metric", 0.1409)
-    sdk.record_metrecord_list_metric_valuesric_value("metric", 0.19)
+    sdk.record_list_metric_values("metric", 0.1409)
+    sdk.record_list_metric_values("metric", 0.19)
     
     time.sleep(5)
     sdk.record_list_metric_values("loss", [12,2,9,8,4,9,4,2,0])
