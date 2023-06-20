@@ -19,7 +19,7 @@ def metricsList () :
     time.sleep(5)
     sdk.record_list_metric_values("autre", [12,2,-9,8,-4,-9,-4,2,0])
 
-    for i in range (9000) : 
+    for i in range (1, 9000) : 
 
         sdk.record_list_metric_values("1onx", 1/i)
 
