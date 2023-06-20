@@ -22,7 +22,7 @@ def metricsList () :
 
     for i in range (1, 500) : 
 
-        sdk.record_list_metric_values("log_x", math.log(i))
+        sdk.record_list_metric_values("logx", math.log(i))
 
 
     print ("Metrics are send")
