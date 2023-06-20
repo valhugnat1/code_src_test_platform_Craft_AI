@@ -5,8 +5,8 @@ import time
 def metricsList () :
 
     sdk = CraftAiSdk()
-    sdk.record_metric_value("metric", 12)
-    sdk.record_metric_value("metric2", 100)
+    sdk.record_metric_value("metricSimple", 12)
+    sdk.record_metric_value("metricSimple2", 100)
 
     sdk.record_list_metric_values("metric", [0.172, 0,198, 0,112])
 
