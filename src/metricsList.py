@@ -9,7 +9,7 @@ def metricsList () :
     sdk.record_metric_value("metricsimple", 12)
     sdk.record_metric_value("metricsimple2", 100)
 
-    sdk.record_list_metric_values("metric", [0.172, 0,198, 0,112])
+    sdk.record_list_metric_values("metric", [0.172, 0.198, 0.112])
 
 
     time.sleep(5)
