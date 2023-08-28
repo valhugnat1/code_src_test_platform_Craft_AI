@@ -1,18 +1,16 @@
 from craft_ai_sdk import CraftAiSdk
 import time
-
+import random
 
 def metricsStep () :
 
     sdk = CraftAiSdk()
 
-    sdk.record_metric_value("metric", 12)
+    sdk.record_metric_value("metric", random.randint(0,10))
 
-    time.sleep(10)
-    sdk.record_metric_value("accuracy", 0.1409)
+    sdk.record_metric_value("accuracy", random.random())
     
-    time.sleep(10)
-    sdk.record_metric_value("loss", 1/3)
+    sdk.record_metric_value("loss", time.time()-1693225620)
 
 
     print ("Metrics are send")
