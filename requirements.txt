@@ -5,3 +5,4 @@ craft_ai_sdk==0.21.0
 joblib
 fastparquet
 pyarrow
+tensorflow=2.15.0
