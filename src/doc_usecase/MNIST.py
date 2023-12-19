@@ -37,8 +37,8 @@ def trainer(learning_rate=0.001, nb_epoch=5, batch_size=64) :
         # Evaluate the model on the test set and log test metrics
         test_loss, test_acc = model.evaluate(test_images, test_labels)
         print({'epoch': epoch + 1, 'test_loss': test_loss, 'test_accuracy': test_acc})
-        sdk.record_list_metric_values("test_loss",  test_loss)
-        sdk.record_list_metric_values("test_accuracy", test_acc)
+        sdk.record_list_metric_values("test-loss",  test_loss)
+        sdk.record_list_metric_values("test-accuracy", test_acc)
 
 
     # Evaluate the model on the test set
@@ -48,5 +48,5 @@ def trainer(learning_rate=0.001, nb_epoch=5, batch_size=64) :
     sdk.record_metric_value("loss", test_loss)
 
     # Save the model
-    model.save('mnist_model.h5')
+    model.save('mnist-model.h5')
     sdk.upload_data_store_object('mnist_model.h5', 'product-doc/mnist_model.h5')
