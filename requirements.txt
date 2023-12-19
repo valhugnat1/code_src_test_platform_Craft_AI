@@ -1,8 +1,8 @@
 scikit-learn
 numpy
 pandas
-craft_ai_sdk==0.21.0
+craft_ai_sdk==0.33.2
 joblib
 fastparquet
 pyarrow
-tensorflow=2.15.0
+tensorflow==2.15.0
