@@ -48,5 +48,5 @@ def trainer(learning_rate=0.001, nb_epoch=5, batch_size=64) :
     sdk.record_metric_value("loss", test_loss)
 
     # Save the model
-    model.save('mnist-model.h5')
-    sdk.upload_data_store_object('mnist_model.h5', 'product-doc/mnist_model.h5')
+    model.save('mnist-model.keras')
+    sdk.upload_data_store_object('mnist-model.keras', 'product-doc/mnist-model.keras')
