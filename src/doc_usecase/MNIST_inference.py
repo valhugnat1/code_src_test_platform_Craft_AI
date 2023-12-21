@@ -8,7 +8,7 @@ def inference(image, model_path, ground_truth):
     sdk = CraftAiSdk()
 
     # Save model in local context and load it
-    CraftAiSdk.download_data_store_object(model_path, "model.keras")
+    sdk.download_data_store_object(model_path, "model.keras")
     model = load_model("model.keras")
 
 
