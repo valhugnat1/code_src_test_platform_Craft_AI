@@ -42,4 +42,4 @@ def inference(image_num, model_path):
         else :
             sdk.record_metric_value("score", 0)
 
-    return {"predicted_class": predicted_class}
+    return {"predicted_class": str(predicted_class)}
