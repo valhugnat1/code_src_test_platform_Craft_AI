@@ -22,7 +22,7 @@ def inference(image, model_path, ground_truth):
     predictions = model.predict(input_image)
 
     # The predictions are probabilities, convert them to class labels
-    predicted_class = np.argmax(predictions[0])
+    predicted_class = int(np.argmax(predictions[0]))
 
     if ground_truth : 
         if ground_truth == predicted_class:
