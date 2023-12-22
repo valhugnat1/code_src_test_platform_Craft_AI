@@ -30,4 +30,4 @@ def inference(image, model_path, ground_truth):
         else :
             sdk.record_metric_value("score", 0)
 
-    return predicted_class
+    return {"predicted_class": predicted_class}
