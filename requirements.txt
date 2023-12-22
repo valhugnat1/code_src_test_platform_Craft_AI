@@ -6,4 +6,3 @@ joblib
 fastparquet
 pyarrow
 tensorflow==2.15.0
-Pillow
