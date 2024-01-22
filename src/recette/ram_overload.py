@@ -28,7 +28,7 @@ def eat_memory(mem_to_eat):
         print(f'Memory Usage: {memory_usage_percent:.2f}%')
         # time.sleep(1)
 
-    for i in range (10):
+    for i in range (60*5):
         
         time.sleep(1)
 
@@ -37,5 +37,5 @@ def main():
     """
     Main sentinel
     """
-    mem_to_eat = 1024
+    mem_to_eat = 256
     eat_memory(mem_to_eat)
