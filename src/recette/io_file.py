@@ -11,8 +11,11 @@ def io_file(file_endpoint_i, file_datastore_i):
         print(contents)
         res += contents
 
-    with open('file_output.txt', 'w', encoding='utf-8') as text_file:
-        text_file.write(res)
+
+    text_file = open('file_output.txt', 'wb')  # Open the file in binary mode
+    text_file.write(res.encode('utf-8'))  # Encode the string to bytes
+    text_file.close()
+
 
     file_endpoint_o = {"resultFile": {"path": "file_output.txt"}}
 
