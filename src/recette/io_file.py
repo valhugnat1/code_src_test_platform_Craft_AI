@@ -1,4 +1,4 @@
-def entryStepFileIo(file_endpoint_i, file_datastore_i):
+def io_file(file_endpoint_i, file_datastore_i):
     res = ""
 
     with open(file_endpoint_i["path"], 'r') as f:
