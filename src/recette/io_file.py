@@ -17,6 +17,6 @@ def io_file(file_endpoint_i, file_datastore_i):
     text_file.close()
 
 
-    file_endpoint_o = {"resultFile": {"path": "file_output.txt"}}
+    file_endpoint_o = {"file_endpoint_o": {"path": "file_output.txt"}}
 
     return file_endpoint_o
