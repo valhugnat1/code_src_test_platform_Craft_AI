@@ -2,8 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from craft_ai_sdk import CraftAiSdk
 
-def generate_next_value(last_last_value, last_value, volatility=0.1):
 
+def generate_next_value(last_last_value, last_value, volatility=0.1):
 
     if last_value == 1 : 
         mean_value=0.9
@@ -31,7 +31,10 @@ def generate_next_value(last_last_value, last_value, volatility=0.1):
     sdk.record_metric_value("recette_metric", next_value)
     sdk.record_metric_value("recette_metric_square", next_value**2)
 
-    return last_value, next_value
+    sdk.create_or_update_environment_variable("LAST_LAST_METRIC_VALUE", last_value)
+    sdk.create_or_update_environment_variable("LAST_METRIC_VALUE", next_value)
+    
+    
 
 """ 
 if __name__ == "__main__":
