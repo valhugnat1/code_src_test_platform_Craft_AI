@@ -31,8 +31,8 @@ def generate_next_value(last_last_value, last_value, volatility=0.1):
 
     sdk = CraftAiSdk()
 
-    sdk.record_metric_value("recette_metric", next_value)
-    sdk.record_metric_value("recette_metric_square", next_value**2)
+    sdk.record_metric_value("recette-metric", next_value)
+    sdk.record_metric_value("recette-metric-square", next_value**2)
 
     sdk.create_or_update_environment_variable("LAST_LAST_METRIC_VALUE", last_value)
     sdk.create_or_update_environment_variable("LAST_METRIC_VALUE", next_value)
