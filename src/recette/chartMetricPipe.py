@@ -4,6 +4,9 @@ from craft_ai_sdk import CraftAiSdk
 
 
 def generate_next_value(last_last_value, last_value, volatility=0.1):
+    
+    last_last_value = float(last_last_value)
+    last_value = float(last_value)
 
     if last_value == 1 : 
         mean_value=0.9
